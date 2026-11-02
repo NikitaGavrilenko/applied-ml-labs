@@ -12,7 +12,7 @@ import time
 import zipfile
 from pathlib import Path
 
-LAB = Path(r'D:\Projects\University_Current\lab1-llm-miracl')
+LAB = Path(__file__).resolve().parents[1]
 ML = Path(r'D:\Anaconda3\envs\ml\python.exe')
 BASE = Path(r'D:\Anaconda3\python.exe')
 DEPS = Path(r'C:\Users\Nick\.cache\codex-runtimes\codex-primary-runtime\dependencies')
@@ -274,7 +274,7 @@ python src/build_report.py
 
 Оригиналы прежней работы сохранены в previous/. Старый корневой Word с незаполненными таблицами не является итоговым отчётом. Пилоты и несовместимость Qwen3-VL сохранены в results/pilot и исключены из основного сравнения. Размеры моделей и квантования различаются; это системный локальный benchmark. LoRA — отдельный контроль на0.5B, не QLoRA и не девятая строка.
 
-Автоматические проверки — results/independent_numeric_checks.json и results/final_audit.json; независимая критика модели — results/independent_model_review.json. Визуальная проверка всех PNG остаётся отдельным явно отмеченным этапом, пока первичный агент её не подтвердит. Репозиторий: https://github.com/NikitaGavrilenko/lab1-llm-miracl.
+Автоматические проверки — results/independent_numeric_checks.json и results/final_audit.json; независимая критика модели — results/independent_model_review.json. Визуальная проверка всех PNG остаётся отдельным явно отмеченным этапом, пока первичный агент её не подтвердит. Репозиторий: https://github.com/NikitaGavrilenko/applied-ml-labs.
 '''
     (LAB/'README.md').write_text(text,encoding='utf-8')
 
@@ -312,15 +312,10 @@ def package():
            'independent_critique':str(LAB/'results/independent_model_review.json'),
            'visual_review':'pending_primary_agent','status':'automatic_pipeline_complete_visual_review_pending'}
     save(LAB/'results/final_audit.json',audit)
-    if not (LAB/'.git').exists(): run('git_init',[GIT,'init','-b','main'])
     ignore=(LAB/'.gitignore').read_text(encoding='utf-8') if (LAB/'.gitignore').exists() else ''
     for pattern in ['.venv*/','models/','report/qa/','*.zip','.workflow/full_run.lock']:
         if pattern not in ignore: ignore+='\n'+pattern
     (LAB/'.gitignore').write_text(ignore+'\n',encoding='utf-8')
-    run('git_add',[GIT,'add','.'])
-    staged=subprocess.run([str(GIT),'diff','--cached','--quiet'],cwd=LAB)
-    if staged.returncode==1:
-        run('git_commit',[GIT,'-c','user.name=Lab1 research artifact','-c','user.email=lab1@localhost','commit','-m','Complete measured MIRACL lab artifacts'])
     archive=LAB/'Lab1_MIRACL_submission.zip'
     with zipfile.ZipFile(archive,'w',zipfile.ZIP_DEFLATED,compresslevel=6) as z:
         for p in LAB.rglob('*'):

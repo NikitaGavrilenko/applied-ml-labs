@@ -8,3 +8,5 @@ __pycache__/
 *.pyc
 ~$*
 .venv*/
+results/logs/
+Лабараторная 2.docx
