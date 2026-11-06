@@ -1,0 +1,38 @@
+Run: D:\Anaconda3\envs\ml\python.exe D:\Projects\University_Current\applied-ml-labs\labs\lab03-marl-agentic-search\test_environment.py
+....
+----------------------------------------------------------------------
+Ran 4 tests in 0.065s
+
+OK
+Run: D:\Anaconda3\envs\ml\python.exe D:\Projects\University_Current\applied-ml-labs\labs\lab03-marl-agentic-search\experiment.py
+reinforce seed=11 val=0.0000 elapsed=2.7s
+reinforce seed=23 val=-0.0181 elapsed=1.5s
+reinforce seed=37 val=0.0048 elapsed=1.5s
+ia2c seed=11 val=-0.0075 elapsed=1.7s
+ia2c seed=23 val=-0.0216 elapsed=1.8s
+ia2c seed=37 val=-0.0280 elapsed=1.8s
+ippo seed=11 val=0.0000 elapsed=4.3s
+ippo seed=23 val=-0.0289 elapsed=4.4s
+ippo seed=37 val=-0.0145 elapsed=4.4s
+iql seed=11 val=0.0000 elapsed=1.0s
+iql seed=23 val=-0.0273 elapsed=1.1s
+iql seed=37 val=-0.0353 elapsed=1.1s
+vdn seed=11 val=-0.0252 elapsed=1.0s
+vdn seed=23 val=-0.0185 elapsed=1.1s
+vdn seed=37 val=-0.0119 elapsed=1.1s
+qmix seed=11 val=-0.0237 elapsed=1.5s
+qmix seed=23 val=-0.0112 elapsed=1.5s
+qmix seed=37 val=-0.0354 elapsed=1.5s
+mappo seed=11 val=0.0000 elapsed=3.8s
+mappo seed=23 val=-0.0208 elapsed=3.9s
+mappo seed=37 val=-0.0572 elapsed=3.9s
+coma seed=11 val=-0.0269 elapsed=1.9s
+coma seed=23 val=-0.0637 elapsed=1.9s
+coma seed=37 val=-0.0577 elapsed=1.9s
+single_ppo seed=11 val=0.0000 elapsed=3.9s
+single_ppo seed=23 val=-0.0589 elapsed=3.9s
+single_ppo seed=37 val=-0.0323 elapsed=3.9s
+Selected on validation: reinforce
+Run: D:\Anaconda3\envs\ml\python.exe D:\Projects\University_Current\applied-ml-labs\labs\lab03-marl-agentic-search\analysis_results.py
+Saved analysis in D:\Projects\University_Current\applied-ml-labs\labs\lab03-marl-agentic-search\results; selected on validation: reinforce
+��������� ���������� ������. ������ Word � ���������� �������� ����������� �������� �� README.

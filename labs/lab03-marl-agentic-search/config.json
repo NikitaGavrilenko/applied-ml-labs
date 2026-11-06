@@ -1,0 +1,14 @@
+{
+  "seeds": [11, 23, 37],
+  "training_queries": 400,
+  "validation_queries": 100,
+  "test_queries": 150,
+  "application_queries": 100,
+  "training_epochs": 1,
+  "agents": 2,
+  "maximum_search_calls": 4,
+  "search_cost": 0.02,
+  "hidden_size": 32,
+  "selection": "validation mean recall minus 0.02 times mean search calls; average over seeds",
+  "note": "The executable experiment.py defines the active settings; this file documents them."
+}

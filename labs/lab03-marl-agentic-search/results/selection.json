@@ -1,0 +1,9 @@
+{
+  "rule": "mean validation recall - 0.02 * mean search calls, across seeds; only MARL methods",
+  "winner": "reinforce",
+  "seeds": [
+    11,
+    23,
+    37
+  ]
+}

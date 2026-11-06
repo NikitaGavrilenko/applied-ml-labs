@@ -1,0 +1,9 @@
+{
+  "archive": "Lab1_MIRACL_submission.zip",
+  "sha256": "ab9ef7219b3756cec18e294a224354ed2b4b28382a0b155242c6c804ecc8cd84",
+  "bytes": 72049410,
+  "docx_sha256": "163ab113a42dbc9c8dea05820107ab37987e37a93550f0b7d271584c6f56a1df",
+  "pdf_sha256": "fd819ed429703fe49010e25d34a00094995dcfc3fc708cbb322fdfdb41de01e7",
+  "archive_crc_verified": true,
+  "manifest_scope": "External archive checksum; manifest itself is excluded from archive to avoid self-reference."
+}
